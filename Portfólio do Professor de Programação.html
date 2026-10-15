@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfólio do Professor de Programação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <span class="brand-mark" data-initials>PP</span>
+      <span class="t" data-bind="nome">Professor</span>
+    </a>
+    <nav class="links" aria-label="Secções">
+      <a href="#sobre">Sobre</a>
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#desafio">Desafio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Alternar tema claro e escuro">◐</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-lead">Portfólio do professor que me ensinou a programar.</p>
+      <h1 data-bind="nome">Professor Nome Apelido</h1>
+      <p class="role"><span data-bind="cargo"></span><br><span data-bind="escola"></span></p>
+      <div class="cta">
+        <a class="btn primary" href="#desafio">Aceitar o desafio</a>
+        <a class="btn" href="#contacto">Falar com o professor</a>
+      </div>
+    </div>
+
+    <div class="win" aria-label="Exemplo de código a ser escrito">
+      <div class="win-bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>I LOVE YOU</span><span class="spacer"></span>
+        <button type="button" id="replay">Barcelona</button>
+      </div>
+      
+      <div class="console" id="heroOut" hidden>
+        <small>Consola</small>
+        <div class="out">&gt; <span id="heroOutText"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sobre">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Quem é o professor</h2>
+      <p>Mais do que explicar sintaxe, ensina a raciocinar.</p>
+    </div>
+    <div class="about">
+      <div>
+        <div class="photo" id="photo" role="img" aria-label="Fotografia do professor"><span data-initials>PP</span></div>
+        <p class="photo-cap" data-bind="cargo"></p>
+      </div>
+      <div>
+        <div class="bio" id="bio"></div>
+        <ul class="chips" aria-label="Tecnologias ensinadas">
+          <li>JavaScript</li><li>MySQL</li><li>PHP</li><li>HTML &amp; CSS</li><li>Lógica de programação</li><li>Desktop</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="disciplinas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>O que se aprende nas aulas</h2>
+      <p>Escolhe uma disciplina para ver o que o aluno aprende e um exemplo do tipo de código trabalhado.</p>
+    </div>
+    <div class="tabs" role="tablist" id="tabs" aria-label="Disciplinas"></div>
+    <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+  </div>
+</section>
+
+<section class="sec" id="trajetoria">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Trajetória</h2>
+      <p>Os passos que fizeram dele o professor que é hoje.</p>
+    </div>
+    <ol class="timeline" id="timeline"></ol>
+  </div>
+</section>
+
+<section class="sec" id="desafio">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>O desafio do professor</h2>
+      <p>Cinco perguntas de programação, no estilo das aulas. Responde sem abrir o editor: só com a mente.</p>
+    </div>
+    <div class="quiz" id="quiz"></div>
+  </div>
+</section>
+
+<section class="sec" id="mensagem">
+  <div class="wrap">
+    <div class="note">
+      <blockquote id="msg"></blockquote>
+      <cite>Um aluno agradecido</cite>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contacto">
+  <div class="wrap contact">
+    <div class="contact-info">
+      <div class="sec-head" style="margin-bottom:20px">
+        <h2>Vamos falar</h2>
+      </div>
+      <p>Escreve uma mensagem ao professor: uma dúvida, um convite para uma palestra ou um agradecimento.</p>
+      <p class="mail"><a id="mailText" href="#"></a></p>
+    </div>
+    <div>
+      <label for="cNome">O teu nome</label>
+      <input type="text" id="cNome" autocomplete="name">
+      <label for="cMsg">Mensagem</label>
+      <textarea id="cMsg" placeholder="Escreve aqui a tua mensagem…"></textarea>
+      <div class="row">
+        <a class="btn primary" id="mailBtn" href="#" target="_blank" rel="noopener">Abrir no e-mail</a>
+        <button class="btn" type="button" id="copyBtn">Copiar mensagem</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Feito com dedicação por <strong data-bind="autor"></strong>, aluno.</span>
+    <span>© 2026 Portfólio de <span data-bind="nome"></span></span>
+  </div>
+</footer>
+
+<button class="btn fab small" id="editBtn" type="button" aria-controls="drawer" aria-expanded="false">✎ Personalizar</button>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Personalizar o portfólio" aria-hidden="true" inert>
+  <div class="drawer-top">
+    <div>
+      <h2>Personalizar</h2>
+      <p class="hint">Escreve os dados reais do professor. A página muda em tempo real e fica guardada neste navegador.</p>
+    </div>
+    <button class="icon-btn" type="button" id="closeBtn" aria-label="Fechar">✕</button>
+  </div>
+  <label for="f_nome">Nome do professor</label><input type="text" id="f_nome">
+  <label for="f_cargo">Cargo</label><input type="text" id="f_cargo">
+  <label for="f_escola">Escola ou instituição</label><input type="text" id="f_escola">
+  <label for="f_email">E-mail de contacto</label><input type="email" id="f_email">
+  <label for="f_frase">Frase / lema (aparece na consola)</label><input type="text" id="f_frase">
+  <label for="f_bio">Biografia (separa os parágrafos com uma linha vazia)</label><textarea id="f_bio" rows="7"></textarea>
+  <label for="f_traj">Trajetória (uma etapa por linha: ano | título | descrição)</label><textarea id="f_traj" rows="7"></textarea>
+  <label for="f_msg">Mensagem do aluno</label><textarea id="f_msg" rows="4"></textarea>
+  <label for="f_autor">O teu nome (rodapé)</label><input type="text" id="f_autor">
+  <label for="f_foto">Fotografia do professor</label>
+  <input type="file" id="f_foto" accept="image/*" style="margin-bottom:16px">
+  <div class="row">
+    <button class="btn primary" type="button" id="saveBtn">Concluir</button>
+    <button class="btn" type="button" id="resetBtn">Repor textos de exemplo</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="picosa.js"></script>
+</body>
+</html>
