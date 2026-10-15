@@ -1,0 +1,186 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101010;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+.Ts {
+    min-height: 75vh;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        radial-gradient(ellipse at 80% 20%,
+        rgba(255, 75, 20, 0.18), transparent 50%),
+        linear-gradient(135deg, #1b1b1b, #101010);
+
+    border-bottom: 1px solid #303030;
+}
+
+.Ts h1 {
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+    color: #ff5722;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.Ts h2 {
+    max-width: 750px;
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 400;
+    line-height: 1.9;
+    color: #c4c4c4;
+}
+
+
+.Albuns {
+    padding: 80px 8%;
+}
+
+.Albuns > h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 45px;
+    padding-left: 18px;
+    border-left: 6px solid #ff5722;
+}
+
+
+.ab,
+.rf,
+.ef,
+.fg,
+.fh,
+.y {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+
+    width: calc(33.333% - 24px);
+    margin: 0 24px 35px 0;
+    padding: 14px;
+
+    background-color: #1b1b1b;
+    border: 1px solid #303030;
+    border-radius: 12px;
+
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.ab:hover,
+.rf:hover,
+.ef:hover,
+.fg:hover,
+.fh:hover,
+.y:hover {
+    transform: translateY(-8px);
+    border-color: #ff5722;
+    box-shadow: 0 12px 35px rgba(255, 87, 34, 0.12);
+}
+
+
+.ab img,
+.rf img,
+.ef img,
+.fg img,
+.fh img,
+.y img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-bottom: 18px;
+}
+
+
+.ab h3,
+.rf h3,
+.ef h3,
+.fg h3,
+.fh h3,
+.y h3 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #bdbdbd;
+    padding: 4px 2px 8px;
+}
+
+
+@media (max-width: 900px) {
+    .ab,
+    .rf,
+    .ef,
+    .fg,
+    .fh,
+    .y {
+        width: calc(50% - 16px);
+        margin-right: 16px;
+    }
+
+    .Ts {
+        min-height: 60vh;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .Ts {
+        min-height: auto;
+        padding: 90px 6%;
+    }
+
+    .Ts h1 {
+        letter-spacing: -2px;
+    }
+
+    .Ts h2 {
+        font-size: 1rem;
+    }
+
+    .Albuns {
+        padding: 55px 6%;
+    }
+
+    .Albuns > h1 {
+        font-size: 2rem;
+    }
+
+    .ab,
+    .rf,
+    .ef,
+    .fg,
+    .fh,
+    .y {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
